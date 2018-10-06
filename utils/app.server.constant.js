@@ -1,0 +1,1 @@
+module.exports.URL_API = '/api/';

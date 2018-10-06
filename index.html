@@ -1,0 +1,21 @@
+<html>
+<title>Practice Nodejs</title>
+
+<body>
+    Hello
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+    socket.connect('localhost:3000');
+    socket.on('hello', (data) => {
+        console.log(data);
+    })
+
+    function hello() {
+        socket.emit('hello', 'My name is Trung');
+    }
+    hello();
+
+</script>
+</html>
